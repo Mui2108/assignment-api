@@ -1,11 +1,14 @@
 
+#### Server API
 
-## Server API
+How to install:
 
- **How to install**
+```sh
+yarn install
+```
 
-> yarn install
+How to run:
 
-**How to run**
-
-> yarn start
+```sh
+yarn start
+```
