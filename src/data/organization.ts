@@ -31,88 +31,20 @@ export const organization = [
     id: 8,
     name: "Realpoint",
   },
-  {
-    id: 9,
-    name: "Tanoodle",
-  },
-  {
-    id: 10,
-    name: "Snaptags",
-  },
-  {
-    id: 11,
-    name: "Meevee",
-  },
-  {
-    id: 12,
-    name: "Lazz",
-  },
-  {
-    id: 13,
-    name: "Babbleset",
-  },
-  {
-    id: 14,
-    name: "Linktype",
-  },
-  {
-    id: 15,
-    name: "Yombu",
-  },
-  {
-    id: 16,
-    name: "Riffpedia",
-  },
-  {
-    id: 17,
-    name: "Vimbo",
-  },
-  {
-    id: 18,
-    name: "Riffpath",
-  },
-  {
-    id: 19,
-    name: "Wikizz",
-  },
-  {
-    id: 20,
-    name: "Youspan",
-  },
-  {
-    id: 21,
-    name: "Topdrive",
-  },
-  {
-    id: 22,
-    name: "Pixonyx",
-  },
-  {
-    id: 23,
-    name: "Browsezoom",
-  },
-  {
-    id: 24,
-    name: "Kimia",
-  },
-  {
-    id: 25,
-    name: "Teklist",
-  },
 ];
 
 export const timelimeStatus = [
   {
     name: "CURRENT",
-    service: 3,
+    service: 4,
     urinal: 4,
-    toilet: 7,
+    toilet: 8,
   },
   {
     name: "LAST CLEANING",
-    service: 3,
+    service: 13,
     urinal: 4,
-    toilet: 7,
+    toilet: 17,
   },
   {
     name: "COUNTING",
