@@ -2,18 +2,21 @@ import express from "express";
 import { Query } from "express-serve-static-core";
 import { compare } from "bcrypt";
 import bodyParser from "body-parser";
-
 import { encodeJWT, verifyToken } from "./jwt";
 import { users } from "./data/user";
 import { organization, timelimeStatus } from "./data/organization";
 import { temperatureDay } from "./data/weather";
-
+import cors from "cors";
 export interface TypedRequestQuery<T extends Query> extends Express.Request {
   query: T;
 }
 
 const app = express();
-
+app.use(
+  cors({
+    credentials: true,
+  })
+);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -47,16 +50,14 @@ app.get("/organization", (_req, res) => {
   res.json({ code: res.statusCode, result: organization });
 });
 
-app.get("")
+app.get("");
 
-app.get("/timeline",verifyToken, (_req, res) => {
+app.get("/timeline", verifyToken, (_req, res) => {
   res.json({ code: res.statusCode, result: timelimeStatus });
 });
 
-app.get("/temperature-tody",verifyToken, (_req, res) => {
+app.get("/temperature-tody", verifyToken, (_req, res) => {
   res.json({ code: res.statusCode, result: temperatureDay });
-})
-
-
+});
 
 app.listen(3000, () => console.log("Server is running..."));
