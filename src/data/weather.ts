@@ -1,4 +1,4 @@
 export const temperatureDay = {
-    temp: 26,
-    humidity: 45
-}
+  temp: 26,
+  humidity: 45,
+};
