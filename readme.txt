@@ -1,6 +1,11 @@
-#How to run this project
-yarn start
 
-yarn global add tsc typescript ts-node ts-node-dev
-tsc --init
-update tsconfig.json (allowjavascript, rootDir, outDir)
+
+## Server API
+
+ **How to install**
+
+> yarn install
+
+**How to run**
+
+> yarn start
