@@ -5,7 +5,8 @@ import bodyParser from "body-parser";
 
 import { encodeJWT, verifyToken } from "./jwt";
 import { users } from "./data/user";
-import { organization } from "./data/organization";
+import { organization, timelimeStatus } from "./data/organization";
+import { temperatureDay } from "./data/weather";
 
 export interface TypedRequestQuery<T extends Query> extends Express.Request {
   query: T;
@@ -42,9 +43,20 @@ app.post("/login", (req, res) => {
   }
 });
 
-app.get("/organization", (req, res) => {
+app.get("/organization", (_req, res) => {
   res.json({ code: res.statusCode, result: organization });
 });
 
-app.get("/");
+app.get("")
+
+app.get("/timeline",verifyToken, (_req, res) => {
+  res.json({ code: res.statusCode, result: timelimeStatus });
+});
+
+app.get("/temperature-tody",verifyToken, (_req, res) => {
+  res.json({ code: res.statusCode, result: temperatureDay });
+})
+
+
+
 app.listen(3000, () => console.log("Server is running..."));
