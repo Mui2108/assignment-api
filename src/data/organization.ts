@@ -100,3 +100,24 @@ export const organization = [
     name: "Teklist",
   },
 ];
+
+export const timelimeStatus = [
+  {
+    name: "CURRENT",
+    service: 3,
+    urinal: 4,
+    toilet: 7,
+  },
+  {
+    name: "LAST CLEANING",
+    service: 3,
+    urinal: 4,
+    toilet: 7,
+  },
+  {
+    name: "COUNTING",
+    service: 3,
+    urinal: 4,
+    toilet: 7,
+  },
+];
