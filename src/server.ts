@@ -60,4 +60,4 @@ app.get("/temperature-tody", verifyToken, (_req, res) => {
   res.json({ code: res.statusCode, result: temperatureDay });
 });
 
-app.listen(3000, () => console.log("Server is running..."));
+app.listen(2000, () => console.log("Server is running..."));
